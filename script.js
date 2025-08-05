@@ -84,7 +84,7 @@ const aboutLink = document.getElementById('about-link');
 const contactLink = document.getElementById('contact-link');
 aboutLink.onclick = function(e) {
   e.preventDefault();
-  showInfoModal('درباره ما', 'این سایت توسط مهندس امین خادم الحسینی با همکاری هیراد عبدالله پور برای آموزش تخصصی برنامه‌نویسی و مهندسی ساخته شده است.');
+  showInfoModal('درباره ما', 'این سایت توسط مهندس امین خادم الحسینی با همکاری هیراد عبدالله پور برای آموزش تخصصی برنامه‌نویسی و مهندسی الکترونیک ساخته شده است.');
 };
 contactLink.onclick = function(e) {
   e.preventDefault();
