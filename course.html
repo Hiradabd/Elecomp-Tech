@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>دوره آموزشی</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .course-header {text-align:center;margin-top:32px;}
+    .course-thumb {width:340px;max-width:90vw;border-radius:18px;box-shadow:0 4px 24px rgba(34,34,34,0.13);margin-bottom:18px;}
+    .course-info {max-width:900px;margin:0 auto 32px auto;padding:0 12px;}
+    .course-title {font-size:2.2rem;font-weight:800;color:#007cf0;margin-bottom:8px;letter-spacing:-1px;}
+    .course-teacher {color:#009688;font-size:1.1rem;margin-bottom:8px;}
+    .course-desc {font-size:1.13rem;color:#333;background:#f6f8fa;border-radius:12px;padding:18px 18px 14px 18px;margin-bottom:24px;line-height:2;box-shadow:0 2px 8px rgba(34,34,34,0.06);}
+    .syllabus-section {background:#fff;border-radius:16px;padding:24px 18px 12px 18px;box-shadow:0 4px 24px rgba(34,34,34,0.10);margin-bottom:32px;max-width:700px;margin-left:auto;margin-right:auto;}
+    .syllabus-title {font-size:1.3rem;font-weight:800;margin-bottom:18px;color:#007cf0;text-align:center;letter-spacing:-1px;}
+    .accordion {
+      border:none;background:none;width:100%;text-align:right;padding:16px 0 16px 0;font-size:1.08rem;cursor:pointer;outline:none;transition:color 0.2s,background 0.2s;border-bottom:1.5px solid #e0f7fa;display:flex;align-items:center;gap:10px;position:relative;font-weight:600;color:#222;
+    }
+    .accordion:last-child {border-bottom:none;}
+    .accordion.active,.accordion:hover {color:#00bcd4;background:#f6f8fa;}
+    .accordion .arrow {
+      transition:transform 0.2s;
+      font-size:1.2rem;
+      margin-right:2px;
+      color:#007cf0;
+    }
+    .accordion.active .arrow {transform:rotate(90deg);}
+    .panel {display:none;padding:0 0 18px 0;}
+    .panel.open {display:block;}
+    .syllabus-link {
+      color:#fff;
+      background:linear-gradient(90deg,#007cf0 0%,#00dfd8 100%);
+      text-decoration:none;
+      border-radius:8px;
+      padding:7px 18px;
+      font-size:1rem;
+      font-family:inherit;
+      font-weight:600;
+      box-shadow:0 2px 8px rgba(0,124,240,0.08);
+      display:inline-block;
+      margin-top:8px;
+      transition:background 0.2s;
+    }
+    .syllabus-link:hover {background:linear-gradient(90deg,#00dfd8 0%,#007cf0 100%);}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>آموزش‌های امین</h1>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="course-header">
+        <img id="course-thumb" class="course-thumb" src="" alt="thumbnail">
+      </div>
+      <div class="course-info">
+        <div class="course-title" id="course-title"></div>
+        <div class="course-teacher" id="course-teacher"></div>
+        <div class="course-desc" id="course-desc"></div>
+      </div>
+      <div class="syllabus-section">
+        <div class="syllabus-title">سرفصل‌های دوره</div>
+        <div id="syllabus-list"></div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <p>© 2025 آموزش‌های مهندسی | طراحی شده توسط مهندس امین</p>
+    </div>
+  </footer>
+  <script src="courses.js"></script>
+  <script src="course.js"></script>
+</body>
+</html>
