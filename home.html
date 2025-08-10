@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AminLabTech - لابی اصلی</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .hero-section {
+      text-align: center;
+      padding: 80px 0;
+      background: linear-gradient(135deg, rgba(15, 15, 35, 0.8) 0%, rgba(26, 26, 46, 0.8) 100%);
+      border-radius: 20px;
+      margin: 40px 0;
+      border: 2px solid #4a90e2;
+      box-shadow: 0 8px 32px rgba(74, 144, 226, 0.3);
+    }
+    
+    .hero-title {
+      font-size: 3.5rem;
+      font-weight: 700;
+      background: linear-gradient(45deg, #4a90e2, #7b68ee, #ff6b6b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 20px;
+      text-shadow: 0 0 20px rgba(74, 144, 226, 0.5);
+    }
+    
+    .hero-subtitle {
+      font-size: 1.4rem;
+      color: #b8c5d6;
+      margin-bottom: 40px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .nav-button {
+      background: linear-gradient(135deg, #4a90e2 0%, #7b68ee 100%);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 16px rgba(74, 144, 226, 0.3);
+      text-decoration: none;
+      display: inline-block;
+    }
+    
+    .nav-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
+      background: linear-gradient(135deg, #7b68ee 0%, #4a90e2 100%);
+    }
+    
+    .features-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin: 60px 0;
+    }
+    
+    .feature-card {
+      background: linear-gradient(135deg, rgba(15, 15, 35, 0.9) 0%, rgba(26, 26, 46, 0.8) 100%);
+      padding: 30px;
+      border-radius: 16px;
+      border: 2px solid #2c3e50;
+      text-align: center;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+    
+    .feature-card:hover {
+      border-color: #4a90e2;
+      transform: translateY(-5px);
+      box-shadow: 0 8px 32px rgba(74, 144, 226, 0.3);
+    }
+    
+    .feature-icon {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      background: linear-gradient(45deg, #4a90e2, #7b68ee);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .feature-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      color: #e0e0e0;
+    }
+    
+    .feature-desc {
+      color: #b8c5d6;
+      line-height: 1.6;
+    }
+    
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+      header nav {
+        margin-top: 20px;
+        justify-content: center;
+      }
+      .nav-button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+        <div>
+          <h1>AminLabTech</h1>
+          <p>مرکز تخصصی آموزش و فناوری</p>
+        </div>
+        <nav style="display: flex; gap: 15px; flex-wrap: wrap;">
+          <a href="#" class="nav-button" id="about-btn">درباره من</a>
+          <a href="index.html" class="nav-button" id="courses-btn">دوره‌ها</a>
+          <a href="#" class="nav-button" id="resume-btn">رزومه</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  
+  <main>
+    <div class="container">
+      <section class="hero-section">
+        <h2 class="hero-title">AminLabTech</h2>
+        <p class="hero-subtitle">به مرکز تخصصی آموزش و فناوری خوش آمدید. اینجا می‌توانید مهارت‌های جدید یاد بگیرید و پروژه‌های خلاقانه انجام دهید.</p>
+        
+
+      </section>
+      
+      <section class="features-section">
+        <div class="feature-card">
+          <div class="feature-icon">🎓</div>
+          <h3 class="feature-title">آموزش تخصصی</h3>
+          <p class="feature-desc">دوره‌های کاربردی و پروژه‌محور در زمینه‌های مختلف فناوری و مهندسی</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">💻</div>
+          <h3 class="feature-title">پروژه‌های عملی</h3>
+          <p class="feature-desc">تمرین‌های عملی و پروژه‌های واقعی برای تقویت مهارت‌های عملی</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">🚀</div>
+          <h3 class="feature-title">آینده‌نگر</h3>
+          <p class="feature-desc">آموزش تکنولوژی‌های روز دنیا و آماده‌سازی شما برای آینده فناوری</p>
+        </div>
+      </section>
+    </div>
+  </main>
+  
+  <footer>
+    <div class="container">
+      <p>© 2025 AminLabTech | طراحی شده توسط امین</p>
+    </div>
+  </footer>
+  
+  <script>
+    // Navigation functionality
+    document.getElementById('about-btn').addEventListener('click', function(e) {
+      e.preventDefault();
+      alert('بخش "درباره من" به زودی اضافه خواهد شد!');
+    });
+    
+    document.getElementById('resume-btn').addEventListener('click', function(e) {
+      e.preventDefault();
+      alert('بخش "رزومه" به زودی اضافه خواهد شد!');
+    });
+    
+    // Courses button already links to index.html
+  </script>
+</body>
+</html>
