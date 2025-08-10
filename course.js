@@ -19,13 +19,27 @@ function renderCourse(course) {
     acc.onclick = function() {
       this.classList.toggle('active');
       panel.classList.toggle('open');
+      
+      // اگر پنل بسته می‌شود، src iframe را خالی کن تا صدا قطع شود
+      if (!panel.classList.contains('open')) {
+        const iframe = panel.querySelector('iframe');
+        if (iframe) {
+          iframe.src = '';
+        }
+      } else {
+        // اگر پنل باز می‌شود، src iframe را دوباره تنظیم کن
+        const iframe = panel.querySelector('iframe');
+        if (iframe) {
+          iframe.src = item.link;
+        }
+      }
     };
     const panel = document.createElement('div');
     panel.className = 'panel';
     if (item.link) {
-      panel.innerHTML = `<a class='syllabus-link' href='${item.link}' target='_blank'>مشاهده ویدیو</a>`;
+      panel.innerHTML = `<p style="color:#666;margin-bottom:12px;font-size:0.95rem;">توضیحات: خودم بعدا متن هاش رو اضافه میکنم</p><iframe src="${item.link}" width="100%" height="315" frameborder="0" allowfullscreen style="border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.1);"></iframe>`;
     } else {
-      panel.innerHTML = '<span style="color:#888">بدون لینک</span>';
+      panel.innerHTML = '<p style="color:#666;margin-bottom:12px;font-size:0.95rem;">توضیحات: خودم بعدا متن هاش رو اضافه میکنم</p>';
     }
     syllabusList.appendChild(acc);
     syllabusList.appendChild(panel);

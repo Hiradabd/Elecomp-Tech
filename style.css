@@ -2,9 +2,9 @@
 
 body {
   font-family: 'Vazirmatn', Tahoma, Arial, sans-serif;
-  background: #f6f8fa;
+  background: #0a0a0f;
   margin: 0;
-  color: #222;
+  color: #e0e0e0;
   direction: rtl;
 }
 
@@ -15,11 +15,11 @@ body {
 }
 
 header {
-  background: linear-gradient(90deg, #007cf0 0%, #00dfd8 100%);
+  background: linear-gradient(90deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
   color: #fff;
   padding: 40px 0 24px 0;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
 }
 
 header h1 {
@@ -42,17 +42,18 @@ header p {
   width: 320px;
   max-width: 90vw;
   padding: 12px 16px;
-  border: 1px solid #b2dfdb;
+  border: 1px solid #2d3748;
   border-radius: 24px;
   font-size: 1rem;
   outline: none;
   transition: border 0.2s;
+  background: #1a202c;
+  color: #e0e0e0;
 }
 #searchInput:focus {
-  border: 1.5px solid #00bcd4;
+  border: 1.5px solid #667eea;
 }
 
-/* --- نوار افقی دوره‌ها --- */
 .videos-section {
   display: flex;
   flex-direction: column;
@@ -64,13 +65,13 @@ header p {
 }
 .videos-section::-webkit-scrollbar {
   height: 10px;
-  background: #f6f8fa;
+  background: #0a0a0f;
 }
 .videos-section::-webkit-scrollbar-thumb {
-  background: #b2dfdb;
+  background: #2d3748;
   border-radius: 8px;
 }
-/* --- کارت مستطیلی افقی برای دوره‌ها --- */
+
 .video-card {
   width: 100%;
   max-width: 1380px;
@@ -82,20 +83,25 @@ header p {
   margin: 0;
   padding: 10px 0 10px 0;
   padding-right: 10px;
-  border: 1.5px solid #e0f7fa;
-  box-shadow: 0 8px 32px 0 rgba(34,34,34,0.16), 0 2px 12px 0 rgba(34,34,34,0.13);
+  border: 1.5px solid #2d3748;
+  box-shadow: 0 8px 32px 0 rgba(102, 126, 234, 0.1), 0 2px 12px 0 rgba(102, 126, 234, 0.05);
   border-radius: 18px;
-  background: #fff;
+  background: #1a202c;
   transition: box-shadow 0.18s, border 0.18s;
 }
 .video-card:not(:last-child) {
   margin-bottom: 32px;
+}
+.video-card:hover {
+  box-shadow: 0 8px 32px 0 rgba(102, 126, 234, 0.2), 0 2px 12px 0 rgba(102, 126, 234, 0.1);
+  border-color: #667eea;
 }
 .video-thumb {
   width: 260px;
   height: 160px;
   object-fit: cover;
   border-radius: 0 18px 18px 0;
+  background: #2d3748;
 }
 .video-info {
   flex: 1;
@@ -108,44 +114,40 @@ header p {
   font-size: 1.1rem;
   font-weight: 700;
   margin: 0 0 8px 0;
-  color: #007cf0;
+  color: #667eea;
 }
 .video-desc {
   font-size: 0.97rem;
-  color: #444;
+  color: #a0aec0;
   margin-bottom: 0;
   flex: 1;
 }
+
 .start-btn {
-  align-self: flex-end;
-  background: linear-gradient(90deg, #007cf0 0%, #00dfd8 100%);
-  color: #fff;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  color: white;
   border: none;
+  padding: 8px 16px;
   border-radius: 8px;
-  padding: 7px 18px;
-  font-size: 1rem;
-  font-family: inherit;
   cursor: pointer;
-  transition: background 0.2s;
-  margin-top: 16px;
-  margin-bottom: -20px;
-  position: relative;
-  z-index: 1;
+  font-weight: 600;
+  transition: all 0.2s;
 }
 .start-btn:hover {
-  background: linear-gradient(90deg, #00dfd8 0%, #007cf0 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
 }
 
 footer {
-  background: #e0f7fa;
-  color: #00796b;
+  background: #1a202c;
+  color: #a0aec0;
   text-align: center;
   padding: 18px 0 10px 0;
   font-size: 1rem;
-  border-top: 1px solid #b2dfdb;
+  border-top: 1px solid #2d3748;
 }
 footer a {
-  color: #00bcd4;
+  color: #667eea;
   text-decoration: none;
   margin: 0 8px;
   font-weight: 700;
@@ -164,20 +166,21 @@ footer a:hover {
   width: 100vw;
   height: 100vh;
   overflow: auto;
-  background: rgba(0,0,0,0.35);
+  background: rgba(0,0,0,0.8);
 }
 .modal-content {
-  background: #fff;
+  background: #1a202c;
   margin: 60px auto;
   padding: 0;
   border-radius: 16px;
   max-width: 600px;
   width: 95vw;
-  box-shadow: 0 8px 32px rgba(0,124,240,0.18);
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
   position: relative;
+  border: 1px solid #2d3748;
 }
 .close {
-  color: #007cf0;
+  color: #667eea;
   position: absolute;
   left: 18px;
   top: 10px;
@@ -189,6 +192,7 @@ footer a:hover {
 #modal-body {
   padding: 24px 18px 18px 18px;
   text-align: center;
+  color: #e0e0e0;
 }
 
 @media (max-width: 600px) {

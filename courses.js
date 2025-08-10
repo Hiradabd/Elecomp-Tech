@@ -14,19 +14,19 @@ const courses = [
       },
       {
         title: "قسمت 2: GPIO Config (بخش اول)",
-        link: "https://youtu.be/mvZqbrju53U?si=kyAf_RkQkHcCLuaZ"
+        link: "https://www.youtube.com/embed/eqpTjLEWbsw"
       },
       {
         title: "قسمت 3: GPIO Config (بخش 2)",
-        link: "https://youtu.be/mvZqbrju53U?si=-nNPLh2H-7D4r0rW"
+        link: "https://www.youtube.com/embed/mvZqbrju53U"
       },
       {
         title: "قسمت 4: interrupts",
-        link: "https://youtu.be/jmXuN61GB_k?si=qnYGfQmL9BQSOh-c"
+        link: "https://www.youtube.com/embed/jmXuN61GB_k"
       },
       {
         title: "قسمت 5: LCD",
-        link: "https://youtu.be/bB0UjqFer2g?si=TmUuhPjjlBi4FSgD"
+        link: "https://www.youtube.com/embed/bB0UjqFer2g"
       }
     ]
   },
@@ -40,12 +40,10 @@ const courses = [
     description: "در این دوره با مفاهیم پایه‌ای برنامه‌نویسی پایتون و کاربردهای آن آشنا می‌شوید.",
     syllabus: [
       {
-        title: "قسمت 1: معرفی پایتون و نصب",
-        link: "https://www.youtube.com/embed/8FcmHDeAbWU"
+        title: "قسمت 1: معرفی پایتون و نصب"
       },
       {
-        title: "قسمت 2: متغیرها و انواع داده در پایتون",
-        link: "https://www.youtube.com/embed/jmXuN61GB_k"
+        title: "قسمت 2: متغیرها و انواع داده در پایتون"
       }
     ]
   }
