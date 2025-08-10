@@ -9,6 +9,15 @@ function renderCourse(course) {
   document.getElementById('course-title').textContent = course.title;
   document.getElementById('course-teacher').textContent = 'مدرس: ' + course.teacher + (course.isFree ? ' | رایگان' : ' | پولی');
   document.getElementById('course-desc').textContent = course.description;
+  
+  // نمایش یا مخفی کردن بخش خرید دوره بر اساس نوع دوره
+  const purchaseSection = document.querySelector('.read-section');
+  if (course.id === 1) { // دوره STM8 - رایگان
+    purchaseSection.style.display = 'none';
+  } else { // دوره پایتون - پولی
+    purchaseSection.style.display = 'block';
+  }
+  
   // سرفصل‌ها
   const syllabusList = document.getElementById('syllabus-list');
   syllabusList.innerHTML = '';
