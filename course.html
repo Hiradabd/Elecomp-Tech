@@ -6,66 +6,98 @@
   <title>دوره آموزشی</title>
   <link rel="stylesheet" href="style.css">
   <style>
+    /* تم دارک آبی و بنفش */
+    body {
+      background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #533483 100%);
+      color: #e0e0e0;
+      min-height: 100vh;
+    }
+    
+    header {
+      background: linear-gradient(135deg, rgba(15, 15, 35, 0.95) 0%, rgba(26, 26, 46, 0.95) 100%);
+      backdrop-filter: blur(10px);
+      border-bottom: 2px solid #4a90e2;
+      box-shadow: 0 4px 20px rgba(74, 144, 226, 0.3);
+    }
+    
+    header h1 {
+      color: #4a90e2;
+      text-shadow: 0 0 10px rgba(74, 144, 226, 0.5);
+    }
+    
+    footer {
+      background: linear-gradient(135deg, rgba(15, 15, 35, 0.95) 0%, rgba(26, 26, 46, 0.95) 100%);
+      backdrop-filter: blur(10px);
+      border-top: 2px solid #4a90e2;
+      color: #b8c5d6;
+    }
+    
     .course-header {text-align:center;margin-top:32px;}
-    .course-thumb {width:340px;max-width:90vw;border-radius:18px;box-shadow:0 4px 24px rgba(34,34,34,0.13);margin-bottom:18px;}
+    .course-thumb {width:340px;max-width:90vw;border-radius:18px;box-shadow:0 8px 32px rgba(74, 144, 226, 0.3);margin-bottom:18px;transition: transform 0.3s ease;}
+    .course-thumb:hover {transform: scale(1.05);}
     .course-info {max-width:900px;margin:0 auto 32px auto;padding:0 12px;}
-    .course-title {font-size:2.2rem;font-weight:800;color:#007cf0;margin-bottom:8px;letter-spacing:-1px;}
-    .course-teacher {color:#009688;font-size:1.1rem;margin-bottom:8px;}
-    .course-desc {font-size:1.13rem;color:#333;background:#f6f8fa;border-radius:12px;padding:18px 18px 14px 18px;margin-bottom:24px;line-height:2;box-shadow:0 2px 8px rgba(34,34,34,0.06);}
-    .syllabus-section {background:#fff;border-radius:16px;padding:24px 18px 12px 18px;box-shadow:0 4px 24px rgba(34,34,34,0.10);margin-bottom:32px;max-width:700px;margin-left:auto;margin-right:auto;}
-    .syllabus-title {font-size:1.3rem;font-weight:800;margin-bottom:18px;color:#007cf0;text-align:center;letter-spacing:-1px;}
+    .course-title {font-size:2.2rem;font-weight:800;background: linear-gradient(45deg, #4a90e2, #7b68ee);-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;margin-bottom:8px;letter-spacing:-1px;}
+    .course-teacher {color:#64b5f6;font-size:1.1rem;margin-bottom:8px;}
+    .course-desc {font-size:1.13rem;color:#e0e0e0;background:linear-gradient(135deg, rgba(15, 15, 35, 0.9) 0%, rgba(26, 26, 46, 0.8) 100%);border-radius:12px;padding:18px 18px 14px 18px;margin-bottom:24px;line-height:2;box-shadow:0 4px 24px rgba(74, 144, 226, 0.2);border: 2px solid #2c3e50;backdrop-filter: blur(10px);}
+    .syllabus-section {background:linear-gradient(135deg, rgba(15, 15, 35, 0.9) 0%, rgba(26, 26, 46, 0.8) 100%);border-radius:16px;padding:24px 18px 12px 18px;box-shadow:0 8px 32px rgba(74, 144, 226, 0.2);margin-bottom:32px;max-width:700px;margin-left:auto;margin-right:auto;border: 2px solid #2c3e50;backdrop-filter: blur(10px);}
+    .syllabus-title {font-size:1.3rem;font-weight:800;margin-bottom:18px;background: linear-gradient(45deg, #4a90e2, #7b68ee);-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;text-align:center;letter-spacing:-1px;}
     .accordion {
-      border:none;background:none;width:100%;text-align:right;padding:16px 0 16px 0;font-size:1.08rem;cursor:pointer;outline:none;transition:color 0.2s,background 0.2s;border-bottom:1.5px solid #e0f7fa;display:flex;align-items:center;gap:10px;position:relative;font-weight:600;color:#222;
+      border:none;background:none;width:100%;text-align:right;padding:16px 0 16px 0;font-size:1.08rem;cursor:pointer;outline:none;transition:all 0.3s ease;border-bottom:2px solid #34495e;display:flex;align-items:center;gap:10px;position:relative;font-weight:600;color:#e0e0e0;
     }
     .accordion:last-child {border-bottom:none;}
-    .accordion.active,.accordion:hover {color:#00bcd4;background:#f6f8fa;}
+    .accordion.active,.accordion:hover {color:#4a90e2;background:rgba(74, 144, 226, 0.1);}
     .accordion .arrow {
-      transition:transform 0.2s;
+      transition:transform 0.3s ease;
       font-size:1.2rem;
       margin-right:2px;
-      color:#007cf0;
+      color:#4a90e2;
     }
     .accordion.active .arrow {transform:rotate(90deg);}
     .panel {display:none;padding:0 0 18px 0;}
     .panel.open {display:block;}
     .syllabus-link {
       color:#fff;
-      background:linear-gradient(90deg,#007cf0 0%,#00dfd8 100%);
+      background:linear-gradient(90deg,#4a90e2 0%,#7b68ee 100%);
       text-decoration:none;
       border-radius:8px;
       padding:7px 18px;
       font-size:1rem;
       font-family:inherit;
       font-weight:600;
-      box-shadow:0 2px 8px rgba(0,124,240,0.08);
+      box-shadow:0 4px 16px rgba(74, 144, 226, 0.3);
       display:inline-block;
       margin-top:8px;
-      transition:background 0.2s;
+      transition:all 0.3s ease;
     }
-    .syllabus-link:hover {background:linear-gradient(90deg,#00dfd8 0%,#007cf0 100%);}
+    .syllabus-link:hover {background:linear-gradient(90deg,#7b68ee 0%,#4a90e2 100%);transform: translateY(-2px);box-shadow:0 6px 20px rgba(74, 144, 226, 0.4);}
     
     /* رید section styles */
     .read-section {
-      background: #fff;
+      background: linear-gradient(135deg, rgba(15, 15, 35, 0.9) 0%, rgba(26, 26, 46, 0.8) 100%);
       border-radius: 16px;
       padding: 24px 18px 12px 18px;
-      box-shadow: 0 4px 24px rgba(34,34,34,0.10);
+      box-shadow: 0 8px 32px rgba(74, 144, 226, 0.2);
       margin-bottom: 32px;
       max-width: 700px;
       margin-left: auto;
       margin-right: auto;
       text-align: center;
+      border: 2px solid #2c3e50;
+      backdrop-filter: blur(10px);
     }
     .read-title {
       font-size: 1.3rem;
       font-weight: 800;
       margin-bottom: 18px;
-      color: #007cf0;
+      background: linear-gradient(45deg, #4a90e2, #7b68ee);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
       letter-spacing: -1px;
     }
     .read-description {
       font-size: 1.1rem;
-      color: #333;
+      color: #b8c5d6;
       margin-bottom: 24px;
       line-height: 1.8;
     }
@@ -95,6 +127,33 @@
     .whatsapp { background: #25d366; color: white; }
     .bale { background: #0057ff; color: white; }
     .email { background: #ea4335; color: white; }
+    
+    /* استایل‌های ویدیو معرفی دوره */
+    .intro-video-section {
+      text-align: center;
+      margin-bottom: 24px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .video-container {
+      margin-bottom: 12px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(74, 144, 226, 0.2);
+    }
+    .video-container .h_iframe-aparat_embed_frame {
+      border-radius: 8px;
+    }
+    .video-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      background: linear-gradient(45deg, #4a90e2, #7b68ee);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 8px;
+    }
   </style>
 </head>
 <body>

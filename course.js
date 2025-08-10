@@ -8,6 +8,28 @@ function renderCourse(course) {
   document.getElementById('course-thumb').src = course.thumbnail;
   document.getElementById('course-title').textContent = course.title;
   document.getElementById('course-teacher').textContent = 'مدرس: ' + course.teacher + (course.isFree ? ' | رایگان' : ' | پولی');
+  
+  // اضافه کردن ویدیو معرفی برای دوره پایتون
+  const courseInfo = document.getElementById('course-desc');
+  if (course.id === 2) { // دوره پایتون
+    // ایجاد عنصر ویدیو با همان استایل ویدیوهای آموزشی
+    const videoSection = document.createElement('div');
+    videoSection.className = 'intro-video-section';
+    videoSection.innerHTML = `
+      <div class="video-container">
+        <style>.h_iframe-aparat_embed_frame{position:relative;}.h_iframe-aparat_embed_frame .ratio{display:block;width:100%;height:auto;}.h_iframe-aparat_embed_frame iframe{position:absolute;top:0;left:0;width:100%;height:100%;}</style>
+        <div class="h_iframe-aparat_embed_frame">
+          <span style="display: block;padding-top: 57%"></span>
+          <iframe src="https://www.aparat.com/video/video/embed/videohash/y31n9vp/vt/frame" allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+        </div>
+      </div>
+      <div class="video-title">ویدیو معرفی دوره</div>
+    `;
+    
+    // قرار دادن ویدیو قبل از توضیحات دوره
+    courseInfo.parentNode.insertBefore(videoSection, courseInfo);
+  }
+  
   document.getElementById('course-desc').textContent = course.description;
   
   // نمایش یا مخفی کردن بخش خرید دوره بر اساس نوع دوره
