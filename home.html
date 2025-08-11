@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AminLabTech - لابی اصلی</title>
+  <title>AminLabTech - Main Lobby</title>
   <link rel="stylesheet" href="style.css">
   <style>
     .hero-section {
@@ -122,12 +122,12 @@
       <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
         <div>
           <h1>AminLabTech</h1>
-          <p>مرکز تخصصی آموزش و فناوری</p>
+          <p>Professional Education & Technology Center</p>
         </div>
         <nav style="display: flex; gap: 15px; flex-wrap: wrap;">
-          <a href="#" class="nav-button" id="about-btn">درباره من</a>
-          <a href="index.html" class="nav-button" id="courses-btn">دوره‌ها</a>
-          <a href="#" class="nav-button" id="resume-btn">رزومه</a>
+          <a href="#" class="nav-button" id="about-btn">About Me</a>
+          <a href="index.html" class="nav-button" id="courses-btn">Courses</a>
+          <a href="#" class="nav-button" id="resume-btn">Resume</a>
         </nav>
       </div>
     </div>
@@ -137,28 +137,47 @@
     <div class="container">
       <section class="hero-section">
         <h2 class="hero-title">AminLabTech</h2>
-        <p class="hero-subtitle">به مرکز تخصصی آموزش و فناوری خوش آمدید. اینجا می‌توانید مهارت‌های جدید یاد بگیرید و پروژه‌های خلاقانه انجام دهید.</p>
+        <p class="hero-subtitle">Welcome to the Professional Education & Technology Center. Here you can learn new skills and work on creative projects.</p>
         
+        <!-- Social Media & Contact Links -->
+        <div class="social-links">
+          <a href="https://t.me/your_telegram_username" target="_blank" class="social-link telegram">
+            <span class="social-icon">📱</span>
+            <span class="social-text">تلگرام</span>
+          </a>
+          <a href="https://wa.me/your_whatsapp_number" target="_blank" class="social-link whatsapp">
+            <span class="social-icon">💬</span>
+            <span class="social-text">واتساپ</span>
+          </a>
+          <a href="https://ble.ir/your_bale_username" target="_blank" class="social-link bale">
+            <span class="social-icon">📲</span>
+            <span class="social-text">بله</span>
+          </a>
+          <a href="mailto:your_email@example.com" class="social-link email">
+            <span class="social-icon">📧</span>
+            <span class="social-text">ایمیل</span>
+          </a>
+        </div>
 
       </section>
       
       <section class="features-section">
         <div class="feature-card">
           <div class="feature-icon">🎓</div>
-          <h3 class="feature-title">آموزش تخصصی</h3>
-          <p class="feature-desc">دوره‌های کاربردی و پروژه‌محور در زمینه‌های مختلف فناوری و مهندسی</p>
+          <h3 class="feature-title">Professional Training</h3>
+          <p class="feature-desc">Practical and project-based courses in various fields of technology and engineering</p>
         </div>
         
         <div class="feature-card">
           <div class="feature-icon">💻</div>
-          <h3 class="feature-title">پروژه‌های عملی</h3>
-          <p class="feature-desc">تمرین‌های عملی و پروژه‌های واقعی برای تقویت مهارت‌های عملی</p>
+          <h3 class="feature-title">Practical Projects</h3>
+          <p class="feature-desc">Hands-on exercises and real projects to strengthen practical skills</p>
         </div>
         
         <div class="feature-card">
           <div class="feature-icon">🚀</div>
-          <h3 class="feature-title">آینده‌نگر</h3>
-          <p class="feature-desc">آموزش تکنولوژی‌های روز دنیا و آماده‌سازی شما برای آینده فناوری</p>
+          <h3 class="feature-title">Future-Oriented</h3>
+          <p class="feature-desc">Learning cutting-edge technologies and preparing you for the future of technology</p>
         </div>
       </section>
     </div>
@@ -166,7 +185,7 @@
   
   <footer>
     <div class="container">
-      <p>© 2025 AminLabTech | طراحی شده توسط امین</p>
+      <p>© 2025 AminLabTech | Designed by Amin</p>
     </div>
   </footer>
   
@@ -174,12 +193,12 @@
     // Navigation functionality
     document.getElementById('about-btn').addEventListener('click', function(e) {
       e.preventDefault();
-      alert('بخش "درباره من" به زودی اضافه خواهد شد!');
+      alert('"About Me" section will be added soon!');
     });
     
     document.getElementById('resume-btn').addEventListener('click', function(e) {
       e.preventDefault();
-      alert('بخش "رزومه" به زودی اضافه خواهد شد!');
+      alert('"Resume" section will be added soon!');
     });
     
     // Courses button already links to index.html

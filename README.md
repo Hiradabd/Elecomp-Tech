@@ -1,48 +1,48 @@
-# AminLabTech - وب‌سایت آموزشی
+# AminLabTech - Educational Website
 
-## ساختار فایل‌ها
+## File Structure
 
-### 🏠 `home.html` - صفحه اصلی (لابی)
-- صفحه اصلی سایت با برند AminLabTech
-- شامل نوار ابزار ناوبری با دکمه‌های:
-  - **درباره من** - (در حال توسعه)
-  - **دوره‌ها** - هدایت به صفحه دوره‌ها
-  - **رزومه** - (در حال توسعه)
-- طراحی مدرن و ریسپانسیو
-- استفاده از همان تم و استایل سایت
+### 🏠 `home.html` - Main Page (Lobby)
+- Main page of the website with AminLabTech brand
+- Includes navigation toolbar with buttons:
+  - **About Me** - (Under development)
+  - **Courses** - Redirects to courses page
+  - **Resume** - (Under development)
+- Modern and responsive design
+- Uses the same theme and style as the site
 
-### 📚 `index.html` - صفحه دوره‌ها
-- نمایش تمام دوره‌های آموزشی
-- قابلیت جستجو در دوره‌ها
-- دکمه "بازگشت به خانه" برای بازگشت به لابی اصلی
-- استفاده از فایل‌های `courses.js` و `script.js`
+### 📚 `index.html` - Courses Page
+- Displays all educational courses
+- Search functionality in courses
+- "Back to Home" button to return to main lobby
+- Uses `courses.js` and `script.js` files
 
-## نحوه استفاده
+## How to Use
 
-1. **شروع از لابی**: ابتدا `home.html` را باز کنید
-2. **انتقال به دوره‌ها**: روی دکمه "دوره‌ها" کلیک کنید تا به `index.html` بروید
-3. **بازگشت به خانه**: از صفحه دوره‌ها می‌توانید با دکمه "بازگشت به خانه" برگردید
+1. **Start from Lobby**: First open `home.html`
+2. **Go to Courses**: Click on "Courses" button to go to `index.html`
+3. **Return Home**: From courses page you can return with "Back to Home" button
 
-## ویژگی‌ها
+## Features
 
-- ✅ طراحی ریسپانسیو
-- ✅ تم مدرن و زیبا
-- ✅ ناوبری آسان بین صفحات
-- ✅ سازگار با موبایل و دسکتاپ
-- ✅ استفاده از فونت فارسی Vazirmatn
+- ✅ Responsive design
+- ✅ Modern and beautiful theme
+- ✅ Easy navigation between pages
+- ✅ Compatible with mobile and desktop
+- ✅ Uses Vazirmatn font
 
-## فایل‌های پشتیبانی
+## Supporting Files
 
-- `style.css` - استایل‌های مشترک
-- `courses.js` - داده‌های دوره‌ها
-- `script.js` - عملکردهای JavaScript
-- `course.html` - قالب دوره‌ها
-- `course.js` - عملکردهای دوره‌ها
+- `style.css` - Common styles
+- `courses.js` - Course data
+- `script.js` - JavaScript functions
+- `course.html` - Course template
+- `course.js` - Course functions
 
-## توسعه آینده
+## Future Development
 
-- [ ] صفحه "درباره من"
-- [ ] صفحه "رزومه"
-- [ ] سیستم احراز هویت
-- [ ] پنل مدیریت
-- [ ] سیستم نظرات و امتیازدهی
+- [ ] "About Me" page
+- [ ] "Resume" page
+- [ ] Authentication system
+- [ ] Admin panel
+- [ ] Comments and rating system
