@@ -1,9 +1,9 @@
-# AminLabTech - Educational Website
+# AminTechLab - Educational Website
 
 ## File Structure
 
 ### 🏠 `home.html` - Main Page (Lobby)
-- Main page of the website with AminLabTech brand
+- Main page of the website with AminTechLab brand
 - Includes navigation toolbar with buttons:
   - **About Me** - (Under development)
   - **Courses** - Redirects to courses page
